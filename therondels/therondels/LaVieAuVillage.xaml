@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Therondels.LaVieAuVillage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Therondels"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot"  >
+        <!--Pivot Control-->
+        <controls:Pivot Margin="0,30,0,0" Title=" " Foreground="#7E0E00">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="Agenda">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxAgenda" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="250" Margin="124,20,0,0" Name="imageAgenda" Width="208" Source="/therondels;component/Images/LaVieAuVillage/fete_therondels.jpg" HorizontalAlignment="Center" Tap="ClickImage"/>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Archives">
+                <Grid>
+                    <ListBox local:TiltEffect.IsTiltEnabled="True" Margin="10,0,0,0" Name="articlesListbox" Foreground="#7E0E00" SelectionChanged="ArticlesListboxSelectionChanged" FontSize="24"/>
+                </Grid>
+            </controls:PivotItem>
+            <!--Pivot item three-->
+            <controls:PivotItem Header="Salle des fêtes">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxSalleDesFêtes1" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="7,0,0,20" Name="imageSDF13" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf13.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="158,-125,0,20" Name="imageSDF14" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf14.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="308,-125,0,20" Name="imageSDF15" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf15.jpg" Tap="ClickImage"/>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxSalleDesFêtes2" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="7,0,0,20" Name="imageSDF1" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf1.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="158,-125,0,20" Name="imageSDF2" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf2.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="308,-125,0,20" Name="imageSDF3" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf3.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="7,0,0,20" Name="imageSDF4" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf4.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="158,-125,0,20" Name="imageSDF5" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf5.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="308,-125,0,20" Name="imageSDF6" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf6.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="7,0,0,20" Name="imageSDF7" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf7.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="158,-125,0,20" Name="imageSDF8" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf8.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="308,-125,0,20" Name="imageSDF9" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf9.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="7,0,0,20" Name="imageSDF10" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf10.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="158,-125,0,20" Name="imageSDF11" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf11.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="308,-125,0,20" Name="imageSDF12" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf12.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="7,0,0,20" Name="imageSDF16" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf16.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="158,-125,0,20" Name="imageSDF17" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf17.jpg" Tap="ClickImage"/>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="105" Margin="308,-125,0,20" Name="imageSDF18" Width="140" Source="/therondels;component/Images/LaVieAuVillage/sdf18.jpg" Tap="ClickImage"/>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+            <!--Pivot item four-->
+            <controls:PivotItem Header="Bulletins">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxBulletins" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <ListBox local:TiltEffect.IsTiltEnabled="True" Margin="10,0,0,0" Name="bulletinsListbox" Foreground="#7E0E00" SelectionChanged="BulletinsListboxSelectionChanged" FontSize="24"/>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+        <Grid.Background>
+            <ImageBrush ImageSource="/therondels;component/Images/new_page_background.jpg" />
+        </Grid.Background>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>

@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/therondels/therondels/Bin
+/therondels/therondels/obj
+/therondels/ScheduledTaskAgent1/Bin
+/therondels/ScheduledTaskAgent1/obj
+/therondels/RuntimeComponent1/Bin
+/therondels/RuntimeComponent1/obj
+/therondels/.vs
+*.user

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67C3F7A0-4E56-411E-95C5-C18AAE0A54F3}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Therondels</RootNamespace>
+    <AssemblyName>Therondels</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Therondels_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Therondels.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget />
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget />
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget />
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget />
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack-PCL, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack-PCL.1.4.6\lib\HtmlAgilityPack-PCL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AproposPage.xaml.cs">
+      <DependentUpon>AproposPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Article.cs" />
+    <Compile Include="Champs.cs" />
+    <Compile Include="LaVieAuVillage.xaml.cs">
+      <DependentUpon>LaVieAuVillage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LesProfessionnels.xaml.cs">
+      <DependentUpon>LesProfessionnels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LeTourisme.xaml.cs">
+      <DependentUpon>LeTourisme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LeVillage.xaml.cs">
+      <DependentUpon>LeVillage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LiensPage.xaml.cs">
+      <DependentUpon>LiensPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewsArticlePage.xaml.cs">
+      <DependentUpon>NewsArticlePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="oldArticles.cs" />
+    <Compile Include="PicturePage.xaml.cs">
+      <DependentUpon>PicturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SlideShow.xaml.cs">
+      <DependentUpon>SlideShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TiltEffect.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AproposPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LaVieAuVillage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LesProfessionnels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LeTourisme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LeVillage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LiensPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewsArticlePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PicturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SlideShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_title.png" />
+    <Content Include="icone-grande.png" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <Resource Include="Images\icone-article.png" />
+    <Resource Include="Images\LeVillage\ecole.jpg" />
+    <Resource Include="Images\LeTourisme\sentier1.jpg" />
+    <Resource Include="Images\LeTourisme\sentier2.jpg" />
+    <Resource Include="Images\LeTourisme\sentier3.jpg" />
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\SquareTile150x150.png" />
+    <Content Include="Assets\SquareTile71x71.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\WideLogo.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Resource Include="Images\icone-petite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LaVieAuVillage\sdf1.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf10.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf11.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf12.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf13.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf14.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf15.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf16.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf17.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf18.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf2.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf3.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf4.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf5.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf6.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf7.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf8.jpg" />
+    <Resource Include="Images\LaVieAuVillage\sdf9.jpg" />
+    <Resource Include="Images\LeTourisme\accueil.jpg" />
+    <Resource Include="Images\LeTourisme\campingcar1.jpg" />
+    <Resource Include="Images\LeTourisme\campingcar2.jpg" />
+    <Resource Include="Images\LeTourisme\campingcar3.jpg" />
+    <Resource Include="Images\LeTourisme\campingcar4.jpg" />
+    <Resource Include="Images\LeTourisme\campingcar5.jpg" />
+    <Resource Include="Images\LeTourisme\musee1.jpg" />
+    <Resource Include="Images\LeTourisme\musee2.jpg" />
+    <Resource Include="Images\LeTourisme\musee3.jpg" />
+    <Resource Include="Images\LeTourisme\musee4.jpg" />
+    <Resource Include="Images\LeTourisme\musee5.jpg" />
+    <Resource Include="Images\LeTourisme\musee6.jpg" />
+    <Resource Include="Images\LeTourisme\presqu1.jpg" />
+    <Resource Include="Images\LeTourisme\presqu2.jpg" />
+    <Resource Include="Images\LeTourisme\presqu3.jpg" />
+    <Resource Include="Images\LeTourisme\presqu4.jpg" />
+    <Resource Include="Images\LeTourisme\presqu5.jpg" />
+    <Resource Include="Images\LeTourisme\presqu6.jpg" />
+    <Resource Include="Images\LesProfessionnels\fromage1.jpg" />
+    <Resource Include="Images\LesProfessionnels\fromage2.jpg" />
+    <Resource Include="Images\LesProfessionnels\fromage3.jpg" />
+    <Resource Include="Images\LesProfessionnels\fromage4.jpg" />
+    <Resource Include="Images\LesProfessionnels\fromage5.jpg" />
+    <Resource Include="Images\LesProfessionnels\fromage6.jpg" />
+    <Resource Include="Images\LesProfessionnels\servicesmedicaux.jpg" />
+    <Resource Include="Images\LeVillage\eglise.jpg" />
+    <Resource Include="Images\LeVillage\eglise2.jpg" />
+    <Resource Include="Images\LeVillage\eglise3.jpg" />
+    <Resource Include="Images\LeVillage\eglise4.jpg" />
+    <Resource Include="Images\LeVillage\eglise5.jpg" />
+    <Resource Include="Images\LeVillage\eglise6.jpg" />
+    <Resource Include="Images\LeVillage\expat1.jpg" />
+    <Resource Include="Images\LeVillage\expat2.jpg" />
+    <Resource Include="Images\LeVillage\expat3.jpg" />
+    <Resource Include="Images\LeVillage\jeancarbonel.jpg" />
+    <Resource Include="Images\LeVillage\therondels.jpg" />
+    <Resource Include="Images\icone-liens.png" />
+    <Resource Include="Images\icone-grande.png" />
+    <Content Include="Images\mairie_therondels.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\new_page_background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\therondels_banner.png" />
+    <Resource Include="Images\la_vie_au_village_banner.jpg" />
+    <Resource Include="Images\les_professionnels_banner.jpg" />
+    <Resource Include="Images\le_tourisme_banner.jpg" />
+    <Resource Include="Images\le_village_banner.jpg" />
+    <Resource Include="Images\LaVieAuVillage\fete_therondels.jpg" />
+    <Resource Include="Images\video-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SampleData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScheduledTaskAgent1\ScheduledTaskAgent1.csproj">
+      <Project>{80F72B25-9B09-495D-85C8-B3AB619E6043}</Project>
+      <Name>ScheduledTaskAgent1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

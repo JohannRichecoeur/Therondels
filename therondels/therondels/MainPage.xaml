@@ -1,0 +1,96 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Therondels.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Therondels"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    
+    
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FFBEBEBE">
+        <!--Panorama control-->
+        <controls:Panorama>
+            <controls:Panorama.Title>
+                <StackPanel Orientation="Vertical" Margin="0,45,0,0">
+                    <Image x:Name="icon" Source="Images/therondels_banner.png" Height="163" Width="1920" HorizontalAlignment="Left" />
+                    <!--<TextBlock Text="my application" FontStyle="Italic" FontSize="40" VerticalAlignment="Center" Margin="0,-40,0,0" />-->
+                </StackPanel>
+        </controls:Panorama.Title>
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="Actualités" Foreground="Black" Name="actuTitle">
+                <Grid>
+                    <ProgressBar Height="30" HorizontalAlignment="Left" Margin="2,-40,0,0" Name="progressBarActus" VerticalAlignment="Top" Width="421" Background="Black" IsIndeterminate="True" Visibility="Collapsed" Foreground="Purple" />
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,-14,-12,0" ItemsSource="{Binding Items}" SelectionChanged="SelectionArticleChanged" Name="listBoxActus">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,7">
+                                    <Image Source="Images/icone-petite.png" Margin="12,0,0,0" />
+                                    <StackPanel Margin="0,0,0,15" Width="432" Height="78">
+                                        <TextBlock local:TiltEffect.IsTiltEnabled="True" Text="{Binding Title}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextExtraLargeStyle}" Foreground="#7E0E00"/>
+                                        <TextBlock local:TiltEffect.IsTiltEnabled="True" Text="{Binding Description}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}" Foreground="#FFCB7A6B"/>
+                            </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+ 
+            <!--Panorama item two-->
+            <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
+            <controls:PanoramaItem >
+                <ListBox Margin="15,35,0,21" Height="Auto" Width="413" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Top" VerticalAlignment="Top">
+                    <!--Replace rectangle with image-->
+                    <!--<Rectangle Height="80" Width="80" Fill="#FFE5001b" Margin="10,10,9,0" Name="first" />-->
+                    <Image Name="ImageLeVillage" local:TiltEffect.IsTiltEnabled="True" Height="100" Width="350" Margin="10,20,9,0" Source="Images/le_village_banner.jpg" Tap="SelectedLeVillage" />
+                    <Image Name="ImageLaVieAuVillage" local:TiltEffect.IsTiltEnabled="True" Height="100" Width="350" Margin="10,30,9,0" Source="Images/la_vie_au_village_banner.jpg" Tap="SelectedLaVieAuVillage"/>
+                    <Image Name="ImageLeTourisme" local:TiltEffect.IsTiltEnabled="True" Height="100" Width="350" Margin="10,30,9,0" Source="Images/le_tourisme_banner.jpg" Tap="SelectedLeTourisme"/>
+                    <Image Name="ImageLesProfessionnels" local:TiltEffect.IsTiltEnabled="True" Height="100" Width="350" Margin="10,30,9,0" Source="Images/les_professionnels_banner.jpg" Tap="SelectedLesProfessionnels"/>
+                </ListBox>
+            </controls:PanoramaItem>
+
+            <!--Panorama item three-->
+            <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
+            <controls:PanoramaItem Header="Informations" Foreground="Black" >
+                <Grid >
+                    <ListBox Margin="0,0,-17,0" Width="437">
+                        <TextBlock Foreground="Black" Height="38" HorizontalAlignment="Left" Margin="15,3,0,0" Name="textBlockTherondelsDistance" Text="" VerticalAlignment="Top" Width="Auto" />
+                        <TextBlock local:TiltEffect.IsTiltEnabled="True" Height="30" HorizontalAlignment="Left" Margin="15,-8,0,10" Name="textBlock3" Text="Comment venir" VerticalAlignment="Top" Tap="GoToTherondelsButtonClick" Foreground="{StaticResource PhoneAccentBrush}" Width="154" TextAlignment="Left" />
+                        <TextBlock Height="111" HorizontalAlignment="Left" Margin="15,20,0,0" Name="textBlockMairie" Text="" VerticalAlignment="Top" Width="358" Foreground="Black" />
+                        <TextBlock local:TiltEffect.IsTiltEnabled="True" Height="29" HorizontalAlignment="Left" Margin="15,0,0,0" Name="textBlock2" Text="contact@therondels.fr" VerticalAlignment="Top" Width="205" FontSize="20" Tap="SendMail" Foreground="{StaticResource PhoneAccentBrush}" TextAlignment="Left" />
+                        <Border BorderBrush="{StaticResource PhoneAccentBrush}" BorderThickness="2" Height="131" HorizontalAlignment="Left" Margin="240,-137,0,0" Name="border1" VerticalAlignment="Top" Width="178">
+                            <Image local:TiltEffect.IsTiltEnabled="True" Height="121" Name="image2" Stretch="Fill" Width="168" Source="Images\video-image.jpg" Tap="PlayVideoButtonClick"/>
+                        </Border>
+                        <TextBlock local:TiltEffect.IsTiltEnabled="True" Height="35" HorizontalAlignment="Left" Margin="105,50,0,0" Name="textBlockLiens" Text="D'autres sites à visiter" VerticalAlignment="Top" Tap="TextBlockLiensSelected" Foreground="{StaticResource PhoneAccentBrush}" Width="250" TextAlignment="Left" FontSize="24" />
+                        <Image Height="80" HorizontalAlignment="Left" Margin="190,10,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="80" Source="/therondels;component/Images/icone-petite.png" Tap="TextBlockLiensSelected"/>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+        
+        
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Mode="Minimized" ForegroundColor="#7E0E00" BackgroundColor="#FFBEBEBE">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItemActualiser" Text="actualiser" Click="MenuItemActualiser_OnClick"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItemParametres" Text="paramètres" Click="MenuItemParametresClick"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItemAPropos" Text="à propos" Click="MenuItemAProposClick"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

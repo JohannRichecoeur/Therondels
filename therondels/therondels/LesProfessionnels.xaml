@@ -1,0 +1,104 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Therondels.LesProfessionnels"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Therondels"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <!--Pivot Control-->
+        <controls:Pivot Margin="0,30,0,0" Title=" " Foreground="#7E0E00">
+            
+            <!--Pivot item one-->
+            <controls:PivotItem Header="Professionnels">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxProfessionnels" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+            
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Fromagerie">
+                <Grid>
+                    <ListBox>
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="112" Margin="14,20,0,20" Name="imageFromage1" Width="200" Source="/therondels;component/Images/LesProfessionnels/fromage1.jpg" Tap="ClickImage" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="112" Margin="267,-132,0,20" Name="imageFromage2" Width="150" Source="/therondels;component/Images/LesProfessionnels/fromage2.jpg" Tap="ClickImage"/>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxFromage1" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="112" Margin="39,20,0,20" Name="imageFromage3" Width="150" Source="/therondels;component/Images/LesProfessionnels/fromage3.jpg" Tap="ClickImage" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="112" Margin="267,-132,0,20" Name="imageFromage4" Width="150" Source="/therondels;component/Images/LesProfessionnels/fromage4.jpg" Tap="ClickImage"/>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxFromage2" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="112" Margin="39,20,0,20" Name="imageFromage5" Width="150" Source="/therondels;component/Images/LesProfessionnels/fromage5.jpg" Tap="ClickImage" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="112" Margin="267,-132,0,20" Name="imageFromage6" Width="150" Source="/therondels;component/Images/LesProfessionnels/fromage6.jpg" Tap="ClickImage"/>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+            
+            <!--Pivot item three-->
+            <controls:PivotItem Header="Agriculture">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxAgriculture" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item four-->
+            <controls:PivotItem Header="Artisanat">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxArtisanat" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item five-->
+            <controls:PivotItem Header="Services médicaux">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxServicesMedicaux" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                        <Image local:TiltEffect.IsTiltEnabled="True" Height="212" Margin="50,20,0,20" Name="imageServicesMedicaux" Width="350" Source="/therondels;component/Images/LesProfessionnels/servicesmedicaux.jpg" Tap="ClickImage" />
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+            
+            <!--Pivot item six-->
+            <controls:PivotItem Header="Commerces">
+                <Grid>
+                    <ListBox>
+                        <TextBlock Foreground="#7E0E00" Height="Auto" HorizontalAlignment="Left" Margin="7,0,0,0" Name="textBoxCommerces" VerticalAlignment="Top" Width="428" FontSize="20" TextWrapping="Wrap" TextAlignment="Left" />
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            
+        </controls:Pivot>
+        <Grid.Background>
+            <ImageBrush ImageSource="/therondels;component/Images/new_page_background.jpg" />
+        </Grid.Background>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>
