@@ -33,7 +33,6 @@ namespace ScheduledTaskAgent1
 
         protected override void OnInvoke(ScheduledTask task)
         {
-
             if (this.Settings.Contains("mostRecentDate"))
             {
                 this.isolatedDate = (DateTime)this.Settings["mostRecentDate"];

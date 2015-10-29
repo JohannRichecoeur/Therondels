@@ -228,40 +228,39 @@ namespace Therondels
 
         private void StartBackgroundAgent()
         {
-            if (this.CanStartBackgroundAgent())
+            // Reset current counter to "0"
+            var app = ShellTile.ActiveTiles.First();
+            ShellTileData newApp = new StandardTileData()
             {
-                // Reset current counter to "0"
-                var app = ShellTile.ActiveTiles.First();
-                ShellTileData newApp = new StandardTileData()
-                {
-                    Count = 0,
-                    Title = "",
-                };
-                app.Update(newApp);
+                Count = 0,
+                Title = "",
+            };
+            app.Update(newApp);
 
-                // Start the background agent
-                var periodicTask = new PeriodicTask("UpdateCounter");
+            // Start the background agent
+            var periodicTask = new PeriodicTask("UpdateCounter");
 
-                if (ScheduledActionService.Find("UpdateCounter") != null)
-                {
-                    ScheduledActionService.Remove("UpdateCounter");
-                }
-
-                periodicTask.Description = "Recherche d'actualités";
-
-                // Need to add try and Catch in case the user has disable the background tack of this application
-                try
-                {
-                    ScheduledActionService.Add(periodicTask);
-
-                    // For testing
-                    ScheduledActionService.LaunchForTest("UpdateCounter", new TimeSpan(0, 0, 0, 10));
-                }
-                catch (Exception)
-                {
-                    periodicTask.ExpirationTime = new DateTime(2010, 1, 1);
-                }
+            if (ScheduledActionService.Find("UpdateCounter") != null)
+            {
+                ScheduledActionService.Remove("UpdateCounter");
             }
+
+            periodicTask.Description = "Recherche d'actualités";
+
+            // Need to add try and Catch in case the user has disable the background tack of this application
+            try
+            {
+                ScheduledActionService.Add(periodicTask);
+
+                // For testing
+                ScheduledActionService.LaunchForTest("UpdateCounter", new TimeSpan(0, 0, 0, 10));
+            }
+            catch (Exception)
+            {
+                periodicTask.ExpirationTime = new DateTime(2010, 1, 1);
+            }
+
+
         }
 
         private void SelectedLeVillage(object sender, System.Windows.Input.GestureEventArgs e)
@@ -313,18 +312,6 @@ namespace Therondels
         private void MenuItemAProposClick(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/AproposPage.xaml", UriKind.Relative));
-        }
-
-        private bool CanStartBackgroundAgent()
-        {
-            try
-            {
-                return (long)DeviceExtendedProperties.GetValue("ApplicationWorkingSetLimit") >= (90 * 1024 * 1024);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                return false;
-            }
         }
 
         private void MenuItemActualiser_OnClick(object sender, EventArgs e)
