@@ -11,9 +11,9 @@
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
-      <ExtendedTask Name="BackgroundTask">
-        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="ScheduledTaskAgent1" Source="ScheduledTaskAgent1" Type="ScheduledTaskAgent1.ScheduledAgent" />
-      </ExtendedTask>
+      <!--<ExtendedTask Name="BackgroundTask">
+        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="ScheduledTaskAgent2" Source="ScheduledTaskAgent2" Type="ScheduledTaskAgent2.ScheduledAgent" />
+      </ExtendedTask>-->
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="TherondelsToken" TaskName="_default">

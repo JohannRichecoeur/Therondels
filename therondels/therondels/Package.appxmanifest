@@ -22,9 +22,15 @@
         <m3:SplashScreen Image="SplashScreenImage.jpg" />
       </m3:VisualElements>
       <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="ScheduledTaskAgent1.ScheduledAgent">
+        <Extension Category="windows.backgroundTasks" EntryPoint="ScheduledTaskAgent2.ScheduledAgent">
           <BackgroundTasks>
+            <Task Type="systemEvent" />
             <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+        <Extension Category="windows.backgroundTasks" EntryPoint="AgHost.BackgroundTask">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
           </BackgroundTasks>
         </Extension>
       </Extensions>

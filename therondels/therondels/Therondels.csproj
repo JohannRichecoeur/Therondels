@@ -324,9 +324,9 @@
     <Folder Include="SampleData\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ScheduledTaskAgent1\ScheduledTaskAgent1.csproj">
-      <Project>{80F72B25-9B09-495D-85C8-B3AB619E6043}</Project>
-      <Name>ScheduledTaskAgent1</Name>
+    <ProjectReference Include="..\ScheduledTaskAgent2\ScheduledTaskAgent2.csproj">
+      <Project>{d669579f-16b2-4668-be20-68834d7e6f5d}</Project>
+      <Name>ScheduledTaskAgent2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

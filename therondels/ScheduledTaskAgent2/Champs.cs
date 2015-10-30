@@ -1,4 +1,4 @@
-﻿namespace ScheduledTaskAgent1
+﻿namespace ScheduledTaskAgent2
 {
     public class Champs
     {

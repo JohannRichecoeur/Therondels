@@ -24,6 +24,12 @@ namespace Therondels
         private const string VideoUrl = "http://dl.dropbox.com/u/45561962/therondels/therondels.flv";
         private readonly GeoCoordinateWatcher watcher = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
 
+        PeriodicTask periodicTask;
+
+        string periodicTaskName = "PeriodicAgent";
+        string resourceIntensiveTaskName = "ResourceIntensiveAgent";
+        public bool agentsAreEnabled = true;
+
         public MainPage()
         {
             InitializeComponent();
@@ -237,30 +243,33 @@ namespace Therondels
             };
             app.Update(newApp);
 
-            // Start the background agent
-            var periodicTask = new PeriodicTask("UpdateCounter");
+            // Start agent
+            agentsAreEnabled = true;
+            periodicTask = ScheduledActionService.Find(periodicTaskName) as PeriodicTask;
 
-            if (ScheduledActionService.Find("UpdateCounter") != null)
+            if (periodicTask != null)
             {
-                ScheduledActionService.Remove("UpdateCounter");
+                ScheduledActionService.Remove(periodicTaskName);
             }
 
+            periodicTask = new PeriodicTask(periodicTaskName);
+
+            // The description is required for periodic agents. This is the string that the user
+            // will see in the background services Settings page on the device.
             periodicTask.Description = "Recherche d'actualités";
 
             // Need to add try and Catch in case the user has disable the background tack of this application
             try
             {
                 ScheduledActionService.Add(periodicTask);
-
+                
                 // For testing
-                ScheduledActionService.LaunchForTest("UpdateCounter", new TimeSpan(0, 0, 0, 10));
+                // ScheduledActionService.LaunchForTest(periodicTaskName, new TimeSpan(0, 0, 0, 10));
             }
             catch (Exception)
             {
                 periodicTask.ExpirationTime = new DateTime(2010, 1, 1);
             }
-
-
         }
 
         private void SelectedLeVillage(object sender, System.Windows.Input.GestureEventArgs e)
