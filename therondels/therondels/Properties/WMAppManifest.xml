@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="fr" />
-  <App xmlns="" ProductID="{32254730-1e28-4cb0-aefe-39f116c0fd9b}" Title="Thérondels" RuntimeType="Silverlight" Version="1.5.0.0" Genre="apps.normal" Author="Jean-Eric Hourchon" Description="Application de Thérondels" Publisher="Therondels" PublisherID="{b327f963-6326-4798-8695-bc7cfcb9592f}">
+  <App xmlns="" ProductID="{32254730-1e28-4cb0-aefe-39f116c0fd9b}" Title="Thérondels" RuntimeType="Silverlight" Version="1.6.0.0" Genre="apps.normal" Author="Jean-Eric Hourchon" Description="Application de Thérondels" Publisher="Therondels" PublisherID="{b327f963-6326-4798-8695-bc7cfcb9592f}">
     <IconPath IsRelative="true" IsResource="false">Images\icone-petite.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_LOCATION" />

@@ -31,7 +31,7 @@
         <Grid x:Name="ContentPanel" Margin="12,159,12,2" Grid.RowSpan="2">
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,44,0,0" Name="textBlockAuthor" Text="Développement de l'application : " VerticalAlignment="Top" FontSize="18" />
             <TextBlock local:TiltEffect.IsTiltEnabled="True" Height="30" HorizontalAlignment="Left" Margin="282,44,0,0" Name="textBlockEmail" Text="Jean-Eric Hourchon" VerticalAlignment="Top" Foreground="{StaticResource PhoneAccentBrush}" FontSize="18" Tap="SendMail"/>
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,68,0,0" Name="textBlockVersion" Text="Version : 1.5" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,68,0,0" Name="textBlockVersion" Text="Version : 1.6" VerticalAlignment="Top" FontSize="18"/>
             <TextBlock Height="63" HorizontalAlignment="Left" Margin="12,104,0,0" Name="textBlockMentions" Text="Tous les textes et images sont issus du site www.therondels.fr" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="18" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,169,0,0" Name="textBlockNoter" Text="Notez cette application" Foreground="{StaticResource PhoneAccentBrush}" VerticalAlignment="Top" Width="225" Tap="TextBlockNoterTap"/>
         </Grid>
